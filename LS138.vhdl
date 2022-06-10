@@ -1,18 +1,18 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity 74138 is
+entity LS138 is
 port(
     A : in std_logic_vector(2 downto 0); 
-    Out : out std_logic_vector(7 downto 0);
+    O : out std_logic_vector(7 downto 0);
     En : in std_logic_vector(2 downto 0)
 );
-end 74138;
+end LS138;
 
-architecture BeH of 74138 is 
-
+architecture BeH of LS138 is 
+begin
 with A select
-Out <=  "00000001" when ("000" and En = "001"),
+O <=    "00000001" when ("000" and En = "001"),
         "00000010" when ("001" and En = "001"),
         "00000100" when ("010" and En = "001"),
         "00001000" when ("011" and En = "001"),
